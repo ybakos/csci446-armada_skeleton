@@ -1,0 +1,11 @@
+- content_for :title do
+  Roles
+
+%h2
+  Roles
+  .action
+    = link_to image_tag('icon_small_new.png'), new_admin_role_path
+    = link_to 'new role', new_admin_role_path
+
+.roles
+  = roles_list(@roles)

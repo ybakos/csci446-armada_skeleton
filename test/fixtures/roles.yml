@@ -1,0 +1,24 @@
+developer:
+  name: developer
+  description: The developer role
+
+staff:
+  name: administrator
+  description: The administrator role
+
+member:
+  name: member
+  description: The member role
+
+# == Schema Information
+#
+# Table name: roles
+#
+#  id          :integer         not null, primary key
+#  name        :string(255)     not null
+#  description :string(255)
+#  users_count :integer         default(0)
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+

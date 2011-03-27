@@ -1,0 +1,1 @@
+ActionController::Base.cookie_verifier_secret = 'a0631c99078c1d792b507928c6690d7df011aef03f84516e8f8a6fd9d123ae92146fd00647a897b42ce2b71c498ef0c01fd3a1f6d924d667dcb2bca61c1f28bf';

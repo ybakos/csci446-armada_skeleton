@@ -1,0 +1,4 @@
+%ul.menubar
+  %li= link_to 'home', home_url_for(current_user), :title => 'Home'
+  = admin_menu_items(current_user)
+  %li= link_to 'TODO', '#', :title => 'TODO'

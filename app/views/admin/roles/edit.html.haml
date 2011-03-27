@@ -1,0 +1,21 @@
+- content_for :title do
+  = "Edit #{@role}"
+
+%h2
+  = "Editing #{@role}"
+  .action
+    = link_to image_tag('icon_small_larrow.png'), admin_roles_path
+    = link_to 'back to list', admin_roles_path
+  .action
+    = link_to image_tag('icon_small_delete.png'),
+              admin_role_path(@role),
+              :confirm => 'Are you sure?',
+              :method => :delete
+    = link_to 'delete',
+              admin_role_path(@role),
+              :confirm => 'Are you sure?',
+              :method => :delete  
+
+= render :partial => "form", :locals => {:role => @role}
+
+

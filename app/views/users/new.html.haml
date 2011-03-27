@@ -1,0 +1,28 @@
+- content_for :title do
+  Register
+
+.login
+  %h2 Register
+  - form_for @user do |f|
+    = f.error_messages
+    %p
+      = f.label :first_name, 'First Name'
+      %br
+      = f.text_field :first_name
+    %p
+      = f.label :last_name, 'Last Name'
+      %br
+      = f.text_field :last_name
+    %p
+      = f.label :email, 'E-mail Address'
+      %br
+      = f.text_field :email
+    %p
+      = f.label :password
+      %br
+      = f.password_field :password
+    %p
+      = f.label :password_confirmation
+      %br
+      = f.password_field :password_confirmation
+    %p= f.submit "Save"

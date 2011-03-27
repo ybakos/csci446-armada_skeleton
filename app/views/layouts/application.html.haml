@@ -1,0 +1,24 @@
+!!! XML
+!!!
+%html{ :'xml:lang' => "en", :lang => "en" }
+  %head
+    %title= yield :title
+    %meta{ :"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
+    %link{ :rel => "shortcut icon", :href => "/favicon.png" }
+    = stylesheet_link_tag 'screen'
+    = google_webfont_stylesheet('Slackey')
+    = javascript_include_tag :defaults
+  %body{:class => controller.action_name, :id => controller.controller_name}
+    #wrapper
+      #masthead
+        = userbar(current_user)
+        %h1= link_to APP_TITLE, root_path, :title => 'Home Screen'
+        = menubar(current_user)
+      #content
+        - unless flash.empty?
+          - flash.each do |key, msg|
+            %div{:class => "flash #{key}"}
+              %p= msg
+        = yield
+      #footer
+        %p &copy; 2011 FIXME.

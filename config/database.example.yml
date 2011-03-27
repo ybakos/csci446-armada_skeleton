@@ -1,0 +1,14 @@
+# An example database configuration file. Copy to database.yml.
+
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
+
+# Heroku generates database.yml for staging and production.

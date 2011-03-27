@@ -1,0 +1,30 @@
+- content_for :title do
+  = "User #{@user}"
+
+%h2
+  = @user
+  .action
+    = link_to image_tag('icon_small_larrow.png'), admin_users_path
+    = link_to 'back to list', admin_users_path
+  .action
+    = link_to image_tag('icon_small_edit.png'), edit_admin_user_path(@user)
+    = link_to 'edit', edit_admin_user_path(@user)
+
+%div[@user]
+  %p
+    %strong
+      First Name:
+    = h @user.first_name
+  %p
+    %strong
+      Last Name:
+    = h @user.last_name
+  %p
+    %strong
+      E-mail Address
+    = h @user.email
+
+  %p
+    %strong
+      Role:
+    = h @user.role

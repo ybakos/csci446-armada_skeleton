@@ -1,0 +1,6 @@
+#userbar
+  %p
+    = "#{current_user}, #{current_user.role.to_s.capitalize}"
+    = link_to 'log out', logout_path
+  %p= Time.now.to_s(:datetime)
+  

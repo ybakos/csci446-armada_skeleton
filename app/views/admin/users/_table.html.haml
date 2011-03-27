@@ -1,0 +1,11 @@
+= will_paginate(users)
+
+%table
+  %tr
+    %th Full Name
+    %th E-mail Address
+    %th Role
+    %th
+  = render :partial => "user", :collection => users
+
+= will_paginate(users)

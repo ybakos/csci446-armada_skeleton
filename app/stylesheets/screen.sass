@@ -1,0 +1,124 @@
+// // This import applies a global reset to any page that imports this stylesheet.
+// @import "blueprint/reset";
+@import "partials/base"
+// // Import all the default blueprint modules so that we can access their mixins.
+// @import "blueprint";
+@import "blueprint/interaction"
+
+@mixin shadow($offset: 2px, $radius: 2px, $color: $med_gray)
+  -moz-box-shadow: $offset $offset $radius $color
+  -webkit-box-shadow: $offset $offset $radius $color
+  box-shadow: $offset $offset $radius $color
+
+@mixin rounded($radius: 2px)
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+body
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, sans-serif
+  font-weight: 200
+
+h2, h3, h4, h5, h6
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, sans-serif
+  font-weight: 300
+
+h1
+  font-family: Slackey, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, sans-serif
+  a
+    text-decoration: none
+
+a
+  color: $med_red
+
+#wrapper
+  width: 800px
+  margin: auto
+
+#userbar
+  float: right
+  font-size: .8em
+  p
+    margin: 0
+    text-align: right
+
+ul.menubar
+  @include shadow
+  @include rounded
+  font-family: "Helvetica Neue"
+  font-weight: 200
+  list-style-type: none
+  margin: 0
+  padding: .2em
+  background-color: $med_gray
+  li
+    display: inline-block
+    padding: 0
+    margin: 0px 0px 1px 0px
+    a
+      @include rounded
+      color: #000
+      padding: 2px 1em
+      margin: 0px
+      text-decoration: none
+      &:hover
+        background-color: #333
+        color: #FFF
+
+#footer
+  p
+    font-size: .8em
+    text-align: center
+
+.login
+  @include shadow(5px, 5px, #999)
+  @include rounded(5px)
+  border: 1px solid $med_gray
+  width: 50%
+  margin: auto
+  padding: 1em
+  h2
+    margin: 0px
+  span.forgot_password
+    font-size: .7em
+    padding-left: 40px
+
+h2 .action
+  margin-left: 40px
+  display: inline
+  img
+    vertical-align: middle
+  span.label
+    font-size: 14px
+  .paginator
+    font-size: 14px
+    a
+      vertical-align: 0
+  a
+    font-size: 14px
+    text-decoration: none
+    vertical-align: middle
+
+body.index
+  table
+    width: 100%
+
+
+.flash
+  p
+    margin: 0px
++blueprint-interaction
+
+p.hint
+  font-size: .8em
+
+.errorExplanation
+  @include shadow(2px, 2px, #999)
+  @include rounded(5px)
+  padding: 8px
+  font-size: .8em
+  color: #FCFCFC
+  background-color: $red_orange
+  ul
+    margin-left: 0px
+    padding-left: 0px
+    list-style-type: none

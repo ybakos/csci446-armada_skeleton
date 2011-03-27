@@ -1,0 +1,18 @@
+- content_for :title do
+  Log In
+
+.login
+  %h2 Hello, you must log in to continue.
+  - form_for @user_session do |f|
+    = f.error_messages(:header_message => 'Login Failed', :message => 'Sorry, please re-enter your credentials.')
+    %p
+      = f.label :email, 'E-mail address'
+      %br
+      = f.text_field :email
+    %p
+      = f.label :password
+      %br
+      = f.password_field :password
+    %p
+      = f.submit 'Log in'
+      %span.forgot_password= link_to 'forgot your password?', new_password_reset_path, :title => 'Reset your password'

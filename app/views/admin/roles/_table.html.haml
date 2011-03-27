@@ -1,0 +1,10 @@
+= will_paginate(roles)
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th
+  = render :partial => "role", :collection => roles
+
+= will_paginate(roles)

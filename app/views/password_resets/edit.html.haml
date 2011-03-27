@@ -1,0 +1,18 @@
+- content_for :title do
+  Reset Password
+
+.login
+  %h2 Reset Password
+  %p.hint Fill out the form below and instructions to reset your password will be emailed to you.
+  - form_for @user, :url => password_reset_path, :method => :put do |f|
+    = f.error_messages 
+    %p
+      = f.label :password
+      %br
+      = f.password_field :password
+    %p
+      = f.label :password_confirmation
+      %br
+      = f.password_field :password_confirmation
+
+    = f.submit "Update my password and log me in" 

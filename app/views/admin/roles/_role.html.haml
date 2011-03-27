@@ -1,0 +1,7 @@
+%tr[role]
+  %td= h role
+  %td= h truncate(role.description, :length => 40)
+  %td
+    = link_to image_tag('icon_small_show.png'), admin_role_path(role)
+    = link_to image_tag('icon_small_edit.png'), edit_admin_role_path(role)
+    = link_to image_tag('icon_small_delete.png'), :confirm => 'Are you sure?', :method => :delete

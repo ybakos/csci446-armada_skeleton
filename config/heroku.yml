@@ -1,0 +1,19 @@
+# heroku_san configuration, for easy multi-env deployments to heroku.
+# Otherwise you've got to append --app appname all the fucking time.
+#
+# Format:
+# 
+# <heroku_san shorthand name>:
+#   app: <Heroku app name>
+#   config:
+#     - <Heroku config:var name>: <Heroku config:var value>
+#
+production: 
+  app: FIXME-production
+  config:
+    BUNDLE_WITHOUT: "development:test"
+
+staging:
+  app: FIXME-staging
+  config: &default
+    BUNDLE_WITHOUT: "development:test"

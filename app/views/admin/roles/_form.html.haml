@@ -1,0 +1,12 @@
+- form_for [:admin, role] do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :description
+    %br
+    = f.text_field :description
+  %p
+    = f.submit "Submit"
