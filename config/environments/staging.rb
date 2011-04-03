@@ -12,6 +12,6 @@ config.action_mailer.default_url_options = { :host => "FIXME" }
 
 # HTTP Basic Auth for staging (using Rack middleware)
 config.middleware.insert_after(::Rack::Lock, "::Rack::Auth::Basic", "Staging") do |u, p|
-  u == ENV['HTTPPASS'] && p == ENV['HTTPUSER']
+  u == ENV['HTTPUSER'] && p == ENV['HTTPPASS']
 end
 
