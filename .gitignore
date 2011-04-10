@@ -19,3 +19,4 @@ test/coverage/*
 Vagrantfile
 *.box
 *.*~
+.rvmrc
